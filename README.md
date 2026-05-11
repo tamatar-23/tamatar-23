@@ -11,7 +11,7 @@ Full-stack AI engineer. I build production systems that put models to work — f
 
 **[Agentic RAG System](https://github.com/tamatar-23/agent1)** — 8-node LangGraph pipeline with conditional routing and a self-reflection loop that auto-retries low-faithful answers. Two-tier query router uses keyword heuristics (zero tokens) with LLM fallback — 100% classification accuracy across 3 route types. Avg faithfulness **0.94** on an adversarial 10-question eval suite.
 
-**[T1ME Nifty50](https://github.com/tamatar-23/t1me)** — Transformer-based financial forecasting system that reframes market data as token sequences for zero-shot prediction across full 360-minute trading windows. Frozen attention layers cut compute ~60% vs full fine-tuning. Distributed training via DDP + AMP with live data from Fyers API.
+**[T1ME](https://github.com/tamatar-23/t1me)** — Transformer-based financial forecasting system that reframes market data as token sequences for zero-shot prediction across full 360-minute trading windows. Frozen attention layers cut compute ~60% vs full fine-tuning. Distributed training via DDP + AMP with live data from Fyers API.
 
 **[GitConsistent](https://github.com/tamatar-23/gitconsistent)** — Production habit & growth platform on Firebase. 500+ concurrent users, 99.9% uptime. Cost-aware LLM routing between LLaMA 3.1-8B and 70B via Groq based on task complexity. Real-time sync via Firestore listeners with optimistic state updates.
 
