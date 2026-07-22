@@ -17,11 +17,17 @@ GitHub: ...................... github.com/tamatar-23
 
 - GitHub Stats ---------------------------------------------------------------
 Repos: ....  33 {Contributed:   3} | Stars: ...........     7
-Commits: .................   232 | Followers: .......    13
-Lines of Code on GitHub: 1,742,805 ( 1,780,066++,   37,261-- )
+Commits: .................   233 | Followers: .......    13
+Lines of Code on GitHub: 1,742,805 ( 1,780,068++,   37,263-- )
 ------------------------------------------------------------------------------
 ```
 <!--END_SECTION:fastfetch-->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg">
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg">
+  <img alt="Gourav's Fastfetch Profile" src="dark_mode.svg" width="100%">
+</picture>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://gouravk2304.vercel.app)
 [![Email](https://img.shields.io/badge/gouravkrishna23@gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:gouravkrishna23@gmail.com)
