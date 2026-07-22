@@ -83,11 +83,11 @@ def get_github_stats():
             "repos": 33,
             "contributed": 3,
             "stars": 7,
-            "commits": 242,
+            "commits": 244,
             "followers": 13,
-            "additions": 1780852,
-            "deletions": 37896,
-            "total_loc": 1742956
+            "additions": 1780871,
+            "deletions": 37955,
+            "total_loc": 1742916
         }
         
     user_data = res["data"]["user"]
@@ -195,7 +195,7 @@ def generate_svg(stats):
     loc_add = f"{stats['additions']:,}"
     loc_del = f"{stats['deletions']:,}"
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="850" height="410" viewBox="0 0 850 410" fill="none">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="850" height="460" viewBox="0 0 850 460" fill="none">
   <style>
     .bg {{ fill: {bg_color}; stroke: {border_color}; stroke-width: 1px; rx: 8px; }}
     .prompt {{ font: bold 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {prompt_color}; }}
@@ -208,93 +208,93 @@ def generate_svg(stats):
     .red {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {red_color}; }}
   </style>
 
-  <rect width="850" height="410" class="bg" />
+  <rect width="850" height="460" class="bg" />
 
-  <g transform="translate(35, 35)">
+  <g transform="translate(35, 30)">
     <!-- Header -->
-    <text x="0" y="0" class="prompt">gourav@tamatar-23</text>
-    <text x="145" y="0" class="dash">------------------------------------------------------------</text>
+    <text x="0" y="15" class="prompt">gourav@tamatar-23</text>
+    <text x="145" y="15" class="dash">------------------------------------------------------------</text>
 
     <!-- Specs -->
-    <text x="0" y="24" class="label">OS</text>
-    <text x="25" y="24" class="dot">: ..........................</text>
-    <text x="195" y="24" class="val">Linux, Windows 11, Web</text>
+    <text x="0" y="39" class="label">OS</text>
+    <text x="25" y="39" class="dot">: ..........................</text>
+    <text x="195" y="39" class="val">Linux, Windows 11, Web</text>
 
-    <text x="0" y="44" class="label">Uptime</text>
-    <text x="50" y="44" class="dot">: ......................</text>
-    <text x="195" y="44" class="val">{uptime}</text>
+    <text x="0" y="59" class="label">Uptime</text>
+    <text x="50" y="59" class="dot">: ......................</text>
+    <text x="195" y="59" class="val">{uptime}</text>
 
-    <text x="0" y="64" class="label">Host</text>
-    <text x="35" y="64" class="dot">: ........................</text>
-    <text x="195" y="64" class="val">Full-Stack AI &amp; Systems</text>
+    <text x="0" y="79" class="label">Host</text>
+    <text x="35" y="79" class="dot">: ........................</text>
+    <text x="195" y="79" class="val">Full-Stack AI &amp; Systems</text>
 
-    <text x="0" y="84" class="label">IDE</text>
-    <text x="30" y="84" class="dot">: .........................</text>
-    <text x="195" y="84" class="val">VS Code, IntelliJ IDEA, Antigravity</text>
+    <text x="0" y="99" class="label">IDE</text>
+    <text x="30" y="99" class="dot">: .........................</text>
+    <text x="195" y="99" class="val">VS Code, IntelliJ IDEA, Antigravity</text>
 
-    <text x="0" y="112" class="label">Languages</text>
-    <text x="75" y="112" class="dot">: ...................</text>
-    <text x="195" y="112" class="val">Python, TypeScript, JavaScript, Java, C++</text>
+    <text x="0" y="127" class="label">Languages</text>
+    <text x="75" y="127" class="dot">: ...................</text>
+    <text x="195" y="127" class="val">Python, TypeScript, JavaScript, Java, C++</text>
 
-    <text x="0" y="132" class="label">Spoken</text>
-    <text x="50" y="132" class="dot">: ......................</text>
-    <text x="195" y="132" class="val">English, Hindi, Odia, Spanish</text>
+    <text x="0" y="147" class="label">Spoken</text>
+    <text x="50" y="147" class="dot">: ......................</text>
+    <text x="195" y="147" class="val">English, Hindi, Odia, Spanish</text>
 
-    <text x="0" y="152" class="label">Hobbies</text>
-    <text x="55" y="152" class="dot">: .....................</text>
-    <text x="195" y="152" class="val">Monkeytype, Photography, PC Building</text>
+    <text x="0" y="167" class="label">Hobbies</text>
+    <text x="55" y="167" class="dot">: .....................</text>
+    <text x="195" y="167" class="val">Monkeytype, Photography, PC Building</text>
 
     <!-- Contact Header -->
-    <text x="0" y="180" class="dash">-</text>
-    <text x="12" y="180" class="val">Contact</text>
-    <text x="70" y="180" class="dash">--------------------------------------------------------------</text>
+    <text x="0" y="195" class="dash">-</text>
+    <text x="12" y="195" class="val">Contact</text>
+    <text x="70" y="195" class="dash">--------------------------------------------------------------</text>
 
-    <text x="0" y="200" class="label">Email</text>
-    <text x="45" y="200" class="dot">: .......................</text>
-    <text x="195" y="200" class="val">gouravkrishna23@gmail.com</text>
+    <text x="0" y="215" class="label">Email</text>
+    <text x="45" y="215" class="dot">: .......................</text>
+    <text x="195" y="215" class="val">gouravkrishna23@gmail.com</text>
 
-    <text x="0" y="220" class="label">Portfolio</text>
-    <text x="70" y="220" class="dot">: ...................</text>
-    <text x="195" y="220" class="val">gouravk2304.vercel.app</text>
+    <text x="0" y="235" class="label">Portfolio</text>
+    <text x="70" y="235" class="dot">: ...................</text>
+    <text x="195" y="235" class="val">gouravk2304.vercel.app</text>
 
-    <text x="0" y="240" class="label">GitHub</text>
-    <text x="50" y="240" class="dot">: ......................</text>
-    <text x="195" y="240" class="val">github.com/tamatar-23</text>
+    <text x="0" y="255" class="label">GitHub</text>
+    <text x="50" y="255" class="dot">: ......................</text>
+    <text x="195" y="255" class="val">github.com/tamatar-23</text>
 
     <!-- GitHub Stats Header -->
-    <text x="0" y="268" class="dash">-</text>
-    <text x="12" y="268" class="val">GitHub Stats</text>
-    <text x="105" y="268" class="dash">--------------------------------------------------</text>
+    <text x="0" y="283" class="dash">-</text>
+    <text x="12" y="283" class="val">GitHub Stats</text>
+    <text x="105" y="283" class="dash">--------------------------------------------------</text>
 
-    <text x="0" y="288" class="label">Repos</text>
-    <text x="45" y="288" class="dot">: ....</text>
-    <text x="80" y="288" class="val">{repos}</text>
-    <text x="105" y="288" class="contrib">{{Contributed: {contributed}}}</text>
+    <text x="0" y="303" class="label">Repos</text>
+    <text x="45" y="303" class="dot">: ....</text>
+    <text x="80" y="303" class="val">{repos}</text>
+    <text x="105" y="303" class="contrib">{{Contributed: {contributed}}}</text>
 
-    <text x="220" y="288" class="dash">|</text>
-    <text x="235" y="288" class="label">Stars</text>
-    <text x="275" y="288" class="dot">: ...........</text>
-    <text x="370" y="288" class="val">{stars}</text>
+    <text x="220" y="303" class="dash">|</text>
+    <text x="235" y="303" class="label">Stars</text>
+    <text x="275" y="303" class="dot">: ...........</text>
+    <text x="370" y="303" class="val">{stars}</text>
 
-    <text x="0" y="308" class="label">Commits</text>
-    <text x="60" y="308" class="dot">: .................</text>
-    <text x="175" y="308" class="val">{commits}</text>
+    <text x="0" y="323" class="label">Commits</text>
+    <text x="60" y="323" class="dot">: .................</text>
+    <text x="175" y="323" class="val">{commits}</text>
 
-    <text x="220" y="308" class="dash">|</text>
-    <text x="235" y="308" class="label">Followers</text>
-    <text x="305" y="308" class="dot">: .......</text>
-    <text x="370" y="308" class="val">{followers}</text>
+    <text x="220" y="323" class="dash">|</text>
+    <text x="235" y="323" class="label">Followers</text>
+    <text x="305" y="323" class="dot">: .......</text>
+    <text x="370" y="323" class="val">{followers}</text>
 
-    <text x="0" y="328" class="label">Lines of Code on GitHub</text>
-    <text x="165" y="328" class="dot">:</text>
-    <text x="175" y="328" class="val">{loc_total}</text>
-    <text x="245" y="328" class="val">(</text>
-    <text x="255" y="328" class="green">{loc_add}++</text>
-    <text x="345" y="328" class="val">,</text>
-    <text x="355" y="328" class="red">{loc_del}--</text>
-    <text x="420" y="328" class="val">)</text>
+    <text x="0" y="343" class="label">Lines of Code on GitHub</text>
+    <text x="165" y="343" class="dot">:</text>
+    <text x="175" y="343" class="val">{loc_total}</text>
+    <text x="245" y="343" class="val">(</text>
+    <text x="255" y="343" class="green">{loc_add}++</text>
+    <text x="345" y="343" class="val">,</text>
+    <text x="355" y="343" class="red">{loc_del}--</text>
+    <text x="420" y="343" class="val">)</text>
 
-    <text x="0" y="348" class="dash">----------------------------------------------------------------------</text>
+    <text x="0" y="363" class="dash">----------------------------------------------------------------------</text>
   </g>
 </svg>"""
     return svg
