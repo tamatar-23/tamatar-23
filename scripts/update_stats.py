@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import urllib.request
 import time
 from datetime import datetime
@@ -83,11 +84,11 @@ def get_github_stats():
             "repos": 33,
             "contributed": 3,
             "stars": 7,
-            "commits": 233,
+            "commits": 236,
             "followers": 13,
-            "additions": 1780068,
-            "deletions": 37263,
-            "total_loc": 1742805
+            "additions": 1780490,
+            "deletions": 37339,
+            "total_loc": 1743151
         }
         
     user_data = res["data"]["user"]
@@ -174,18 +175,7 @@ def get_github_stats():
         "total_loc": net_loc
     }
 
-def generate_svg(stats, dark=True):
-    bg_color = "#0d1117" if dark else "#ffffff"
-    border_color = "#30363d" if dark else "#d0d7de"
-    prompt_color = "#58a6ff" if dark else "#0969da"
-    key_color = "#e5c07b" if dark else "#9a6a00"
-    val_color = "#c9d1d9" if dark else "#24292f"
-    dot_color = "#484f58" if dark else "#8c959f"
-    add_color = "#3fb950" if dark else "#1a7f37"
-    del_color = "#f85149" if dark else "#cf222e"
-    accent_color = "#d2a8ff" if dark else "#8250df"
-    sub_color = "#79c0ff" if dark else "#0550ae"
-
+def format_fastfetch_block(stats):
     uptime = stats["uptime"]
     repos = f"{stats['repos']}"
     contributed = f"{stats['contributed']}"
@@ -196,155 +186,69 @@ def generate_svg(stats, dark=True):
     loc_add = f"{stats['additions']:,}"
     loc_del = f"{stats['deletions']:,}"
 
-    ascii_art = [
-        "+-----------------------+",
-        "|  TAMATAR-23 // CORE   |",
-        "|  -------------------  |",
-        "|  [AI / ML PIPELINES]  |",
-        "|  [AGENTIC RAG]        |",
-        "|  [QUANT SYSTEMS]      |",
-        "+-----------------------+"
-    ]
+    CYAN = "\u001b[1;36m"
+    YELLOW = "\u001b[1;33m"
+    GREEN = "\u001b[1;32m"
+    RED = "\u001b[1;31m"
+    GRAY = "\u001b[0;90m"
+    RESET = "\u001b[0m"
 
-    ascii_svg_lines = []
-    for i, line in enumerate(ascii_art):
-        ascii_svg_lines.append(f'<text x="0" y="{i*22}" class="ascii">{line}</text>')
-    ascii_content = "\n      ".join(ascii_svg_lines)
+    block = f"""```ansi
+{CYAN}gourav@tamatar-23{RESET} {GRAY}-------------------------------------------------------------{RESET}
+{YELLOW}OS:{RESET} {GRAY}..........................{RESET} Linux, Windows 11, Web
+{YELLOW}Uptime:{RESET} {GRAY}......................{RESET} {uptime}
+{YELLOW}Host:{RESET} {GRAY}.......................{RESET} Full-Stack AI & Systems
+{YELLOW}IDE:{RESET} {GRAY}........................{RESET} VS Code, IntelliJ IDEA, Antigravity
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="850" height="340" viewBox="0 0 850 340" fill="none">
-  <style>
-    .bg {{ fill: {bg_color}; stroke: {border_color}; stroke-width: 1.5px; rx: 10px; }}
-    .prompt {{ font: bold 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {prompt_color}; }}
-    .bar {{ font: 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {dot_color}; }}
-    .key {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {key_color}; }}
-    .dot {{ font: 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {dot_color}; }}
-    .val {{ font: 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {val_color}; }}
-    .section {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {accent_color}; }}
-    .add {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {add_color}; }}
-    .del {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {del_color}; }}
-    .accent {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {accent_color}; }}
-    .sub {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {sub_color}; }}
-    .ascii {{ font: 12px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {prompt_color}; opacity: 0.85; }}
-  </style>
+{YELLOW}Languages:{RESET} {GRAY}...................{RESET} Python, TypeScript, JavaScript, Java, C++
+{YELLOW}Spoken:{RESET} {GRAY}......................{RESET} English, Hindi, Odia, Spanish
+{YELLOW}Hobbies:{RESET} {GRAY}.....................{RESET} Monkeytype, Photography, PC Building
 
-  <rect width="850" height="340" class="bg" />
+{GRAY}-{RESET} {CYAN}Contact{RESET} {GRAY}--------------------------------------------------------------------{RESET}
+{YELLOW}Email:{RESET} {GRAY}.......................{RESET} gouravkrishna23@gmail.com
+{YELLOW}Portfolio:{RESET} {GRAY}...................{RESET} gouravk2304.vercel.app
+{YELLOW}GitHub:{RESET} {GRAY}......................{RESET} github.com/tamatar-23
 
-  <!-- Left ASCII Terminal Box -->
-  <g transform="translate(30, 75)">
-    {ascii_content}
-  </g>
-
-  <!-- Right Fastfetch Specs -->
-  <g transform="translate(290, 35)">
-    <!-- Header -->
-    <text x="0" y="0" class="prompt">gourav@tamatar-23</text>
-    <text x="145" y="0" class="bar">----------------------------------</text>
-
-    <!-- Specs -->
-    <text x="0" y="28" class="key">OS</text>
-    <text x="25" y="28" class="dot">: ..........................</text>
-    <text x="195" y="28" class="val">Linux, Windows 11, Web</text>
-
-    <text x="0" y="52" class="key">Uptime</text>
-    <text x="50" y="52" class="dot">: ......................</text>
-    <text x="195" y="52" class="val">{uptime}</text>
-
-    <text x="0" y="76" class="key">Host</text>
-    <text x="35" y="76" class="dot">: ........................</text>
-    <text x="195" y="76" class="val">Full-Stack AI &amp; Systems</text>
-
-    <text x="0" y="100" class="key">IDE</text>
-    <text x="30" y="100" class="dot">: .........................</text>
-    <text x="195" y="100" class="val">VS Code, IntelliJ IDEA, Antigravity</text>
-
-    <text x="0" y="132" class="key">Languages</text>
-    <text x="75" y="132" class="dot">: ...................</text>
-    <text x="195" y="132" class="val">Python, TypeScript, JS, Java, C++</text>
-
-    <text x="0" y="156" class="key">Spoken</text>
-    <text x="50" y="156" class="dot">: ......................</text>
-    <text x="195" y="156" class="val">English, Hindi, Odia, Spanish</text>
-
-    <text x="0" y="180" class="key">Hobbies</text>
-    <text x="55" y="180" class="dot">: .....................</text>
-    <text x="195" y="180" class="val">Monkeytype, Photography, PC Building</text>
-  </g>
-
-  <!-- Bottom Contact & GitHub Stats Section -->
-  <g transform="translate(30, 245)">
-    <!-- Contact Header -->
-    <text x="0" y="0" class="section">- Contact</text>
-    <text x="75" y="0" class="bar">-------------------------------------------------------------------------</text>
-
-    <text x="0" y="22" class="key">Email</text>
-    <text x="45" y="22" class="dot">:</text>
-    <text x="55" y="22" class="val">gouravkrishna23@gmail.com</text>
-
-    <text x="280" y="22" class="key">Portfolio</text>
-    <text x="355" y="22" class="dot">:</text>
-    <text x="365" y="22" class="val">gouravk2304.vercel.app</text>
-
-    <text x="580" y="22" class="key">GitHub</text>
-    <text x="635" y="22" class="dot">:</text>
-    <text x="645" y="22" class="val">github.com/tamatar-23</text>
-
-    <!-- GitHub Stats Header -->
-    <text x="0" y="50" class="section">- GitHub Stats</text>
-    <text x="110" y="50" class="bar">--------------------------------------------------------------------</text>
-
-    <text x="0" y="72" class="key">Repos</text>
-    <text x="45" y="72" class="dot">:</text>
-    <text x="55" y="72" class="val">{repos}</text>
-    <text x="80" y="72" class="accent">{{Contributed: {contributed}}}</text>
-    
-    <text x="210" y="72" class="bar">|</text>
-    <text x="230" y="72" class="key">Stars</text>
-    <text x="275" y="72" class="dot">:</text>
-    <text x="285" y="72" class="val">{stars}</text>
-
-    <text x="340" y="72" class="bar">|</text>
-    <text x="360" y="72" class="key">Commits</text>
-    <text x="425" y="72" class="dot">:</text>
-    <text x="435" y="72" class="val">{commits}</text>
-
-    <text x="510" y="72" class="bar">|</text>
-    <text x="530" y="72" class="key">Followers</text>
-    <text x="610" y="72" class="dot">:</text>
-    <text x="620" y="72" class="val">{followers}</text>
-
-    <text x="0" y="94" class="key">Lines of Code</text>
-    <text x="110" y="94" class="dot">:</text>
-    <text x="120" y="94" class="sub">{loc_total}</text>
-    <text x="210" y="94" class="val">(</text>
-    <text x="220" y="94" class="add">{loc_add}++</text>
-    <text x="315" y="94" class="val">,</text>
-    <text x="330" y="94" class="del">{loc_del}--</text>
-    <text x="400" y="94" class="val">)</text>
-  </g>
-</svg>"""
-    return svg
+{GRAY}-{RESET} {CYAN}GitHub Stats{RESET} {GRAY}---------------------------------------------------------------{RESET}
+{YELLOW}Repos:{RESET} {GRAY}....{RESET}  {repos.rjust(2)} {CYAN}{{Contributed: {contributed.rjust(2)}}}{RESET} {GRAY}|{RESET} {YELLOW}Stars:{RESET} {GRAY}...........{RESET}    {stars.rjust(2)}
+{YELLOW}Commits:{RESET} {GRAY}.................{RESET}   {commits.rjust(3)} {GRAY}|{RESET} {YELLOW}Followers:{RESET} {GRAY}.......{RESET}   {followers.rjust(2)}
+{YELLOW}Lines of Code on GitHub:{RESET} {CYAN}{loc_total}{RESET} ( {GREEN}{loc_add}++{RESET},   {RED}{loc_del}--{RESET} )
+{GRAY}------------------------------------------------------------------------------{RESET}
+```"""
+    return block
 
 def update_readme():
     stats = get_github_stats()
     print("Fetched Stats:", stats)
-    
-    dark_svg = generate_svg(stats, dark=True)
-    light_svg = generate_svg(stats, dark=False)
+    fastfetch_block = format_fastfetch_block(stats)
     
     try:
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     except NameError:
         base_dir = os.getcwd()
-    dark_path = os.path.join(base_dir, "dark_mode.svg")
-    light_path = os.path.join(base_dir, "light_mode.svg")
+    readme_path = os.path.join(base_dir, "README.md")
     
-    with open(dark_path, "w", encoding="utf-8") as f:
-        f.write(dark_svg)
+    if not os.path.exists(readme_path):
+        print("README.md not found!")
+        return
         
-    with open(light_path, "w", encoding="utf-8") as f:
-        f.write(light_svg)
+    with open(readme_path, "r", encoding="utf-8") as f:
+        content = f.read()
         
-    print(f"Successfully generated {dark_path} and {light_path}")
+    start_marker = "<!--START_SECTION:fastfetch-->"
+    end_marker = "<!--END_SECTION:fastfetch-->"
+    
+    if start_marker in content and end_marker in content:
+        pattern = f"{re.escape(start_marker)}[\\s\\S]*?{re.escape(end_marker)}"
+        new_section = f"{start_marker}\n{fastfetch_block}\n{end_marker}"
+        updated_content = re.sub(pattern, new_section, content)
+    else:
+        updated_content = f"{start_marker}\n{fastfetch_block}\n{end_marker}\n\n" + content
+        
+    with open(readme_path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(updated_content)
+        
+    print("Successfully updated README.md")
 
 if __name__ == "__main__":
     update_readme()
