@@ -1,25 +1,25 @@
 <!--START_SECTION:fastfetch-->
 ```ansi
- [1;36mgourav@tamatar-23 [0m  [0;90m------------------------------------------------------------- [0m
- [1;33mOS: [0m  [0;90m.......................... [0m Linux, Windows 11, Web
- [1;33mUptime: [0m  [0;90m...................... [0m 1 year, 5 months, 15 days
- [1;33mHost: [0m  [0;90m....................... [0m Full-Stack AI & Systems
- [1;33mIDE: [0m  [0;90m........................ [0m VS Code, IntelliJ IDEA, Antigravity
+[1;36mgourav@tamatar-23[0m [0;90m-------------------------------------------------------------[0m
+[1;33mOS:[0m [0;90m..........................[0m Linux, Windows 11, Web
+[1;33mUptime:[0m [0;90m......................[0m 1 year, 5 months, 15 days
+[1;33mHost:[0m [0;90m.......................[0m Full-Stack AI & Systems
+[1;33mIDE:[0m [0;90m........................[0m VS Code, IntelliJ IDEA, Antigravity
 
- [1;33mLanguages: [0m  [0;90m................... [0m Python, TypeScript, JavaScript, Java, C++
- [1;33mSpoken: [0m  [0;90m...................... [0m English, Hindi, Odia, Spanish
- [1;33mHobbies: [0m  [0;90m..................... [0m Monkeytype, Photography, PC Building
+[1;33mLanguages:[0m [0;90m...................[0m Python, TypeScript, JavaScript, Java, C++
+[1;33mSpoken:[0m [0;90m......................[0m English, Hindi, Odia, Spanish
+[1;33mHobbies:[0m [0;90m.....................[0m Monkeytype, Photography, PC Building
 
- [0;90m- [0m  [1;36mContact [0m  [0;90m-------------------------------------------------------------------- [0m
- [1;33mEmail: [0m  [0;90m....................... [0m gouravkrishna23@gmail.com
- [1;33mPortfolio: [0m  [0;90m................... [0m gouravk2304.vercel.app
- [1;33mGitHub: [0m  [0;90m...................... [0m github.com/tamatar-23
+[0;90m-[0m [1;36mContact[0m [0;90m--------------------------------------------------------------------[0m
+[1;33mEmail:[0m [0;90m.......................[0m gouravkrishna23@gmail.com
+[1;33mPortfolio:[0m [0;90m...................[0m gouravk2304.vercel.app
+[1;33mGitHub:[0m [0;90m......................[0m github.com/tamatar-23
 
- [0;90m- [0m  [1;36mGitHub Stats [0m  [0;90m--------------------------------------------------------------- [0m
- [1;33mRepos: [0m  [0;90m.... [0m  33  [1;36m{Contributed:  3} [0m  [0;90m| [0m  [1;33mStars: [0m  [0;90m........... [0m     7
- [1;33mCommits: [0m  [0;90m................. [0m   236  [0;90m| [0m  [1;33mFollowers: [0m  [0;90m....... [0m   13
- [1;33mLines of Code on GitHub: [0m  [1;36m1,743,151 [0m (  [1;32m1,780,490++ [0m,    [1;31m37,339-- [0m )
- [0;90m------------------------------------------------------------------------------ [0m
+[0;90m-[0m [1;36mGitHub Stats[0m [0;90m---------------------------------------------------------------[0m
+[1;33mRepos:[0m [0;90m....[0m  33 [1;36m{Contributed:  3}[0m [0;90m|[0m [1;33mStars:[0m [0;90m...........[0m     7
+[1;33mCommits:[0m [0;90m.................[0m   237 [0;90m|[0m [1;33mFollowers:[0m [0;90m.......[0m   13
+[1;33mLines of Code on GitHub:[0m [1;36m1,742,815[0m ( [1;32m1,780,568++[0m,   [1;31m37,753--[0m )
+[0;90m------------------------------------------------------------------------------[0m
 ```
 <!--END_SECTION:fastfetch-->
 
