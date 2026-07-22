@@ -331,7 +331,10 @@ def update_readme():
     dark_svg = generate_svg(stats, dark=True)
     light_svg = generate_svg(stats, dark=False)
     
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    try:
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    except NameError:
+        base_dir = os.getcwd()
     dark_path = os.path.join(base_dir, "dark_mode.svg")
     light_path = os.path.join(base_dir, "light_mode.svg")
     
