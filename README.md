@@ -1,27 +1,4 @@
-<!--START_SECTION:fastfetch-->
-```yaml
-gourav@tamatar-23: -------------------------------------------------------------
-OS: .......................... Linux, Windows 11, Web
-Uptime: ...................... 1 year, 5 months, 15 days
-Host: ........................ Full-Stack AI & Systems
-IDE: ......................... VS Code, IntelliJ IDEA, Antigravity
-
-Languages: ................... Python, TypeScript, JavaScript, Java, C++
-Spoken: ...................... English, Hindi, Odia, Spanish
-Hobbies: ..................... Monkeytype, Photography, PC Building
-
-# Contact --------------------------------------------------------------------
-Email: ....................... gouravkrishna23@gmail.com
-Portfolio: ................... gouravk2304.vercel.app
-GitHub: ...................... github.com/tamatar-23
-
-# GitHub Stats ---------------------------------------------------------------
-Repos: ....  33 {Contributed:   3} | Stars: ...........     7
-Commits: .................   239 | Followers: .......   13
-Lines of Code on GitHub: 1,742,808 ( 1,780,627++,   37,819-- )
-------------------------------------------------------------------------------
-```
-<!--END_SECTION:fastfetch-->
+<img src="card.svg" alt="Gourav's Fastfetch Profile" width="100%">
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://gouravk2304.vercel.app)
 [![Email](https://img.shields.io/badge/gouravkrishna23@gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:gouravkrishna23@gmail.com)

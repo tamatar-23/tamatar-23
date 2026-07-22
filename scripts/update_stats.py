@@ -1,6 +1,5 @@
 import os
 import json
-import re
 import urllib.request
 import time
 from datetime import datetime
@@ -84,11 +83,11 @@ def get_github_stats():
             "repos": 33,
             "contributed": 3,
             "stars": 7,
-            "commits": 236,
+            "commits": 240,
             "followers": 13,
-            "additions": 1780490,
-            "deletions": 37339,
-            "total_loc": 1743151
+            "additions": 1780629,
+            "deletions": 37821,
+            "total_loc": 1742808
         }
         
     user_data = res["data"]["user"]
@@ -175,7 +174,17 @@ def get_github_stats():
         "total_loc": net_loc
     }
 
-def format_fastfetch_block(stats):
+def generate_svg(stats):
+    bg_color = "#0d1117"
+    border_color = "#30363d"
+    prompt_color = "#58a6ff"
+    dash_color = "#484f58"
+    label_color = "#e5c07b"
+    value_color = "#c9d1d9"
+    contrib_color = "#d19a66"
+    green_color = "#73daca"
+    red_color = "#f7768e"
+
     uptime = stats["uptime"]
     repos = f"{stats['repos']}"
     contributed = f"{stats['contributed']}"
@@ -186,62 +195,124 @@ def format_fastfetch_block(stats):
     loc_add = f"{stats['additions']:,}"
     loc_del = f"{stats['deletions']:,}"
 
-    block = f"""```yaml
-gourav@tamatar-23: -------------------------------------------------------------
-OS: .......................... Linux, Windows 11, Web
-Uptime: ...................... {uptime}
-Host: ........................ Full-Stack AI & Systems
-IDE: ......................... VS Code, IntelliJ IDEA, Antigravity
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="850" height="340" viewBox="0 0 850 340" fill="none">
+  <style>
+    .bg {{ fill: {bg_color}; stroke: {border_color}; stroke-width: 1px; rx: 8px; }}
+    .prompt {{ font: bold 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {prompt_color}; }}
+    .dash {{ font: 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {dash_color}; }}
+    .label {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {label_color}; }}
+    .dot {{ font: 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {dash_color}; }}
+    .val {{ font: 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {value_color}; }}
+    .contrib {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {contrib_color}; }}
+    .green {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {green_color}; }}
+    .red {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {red_color}; }}
+  </style>
 
-Languages: ................... Python, TypeScript, JavaScript, Java, C++
-Spoken: ...................... English, Hindi, Odia, Spanish
-Hobbies: ..................... Monkeytype, Photography, PC Building
+  <rect width="850" height="340" class="bg" />
 
-# Contact --------------------------------------------------------------------
-Email: ....................... gouravkrishna23@gmail.com
-Portfolio: ................... gouravk2304.vercel.app
-GitHub: ...................... github.com/tamatar-23
+  <g transform="translate(35, 35)">
+    <!-- Header -->
+    <text x="0" y="0" class="prompt">gourav@tamatar-23</text>
+    <text x="145" y="0" class="dash">------------------------------------------------------------</text>
 
-# GitHub Stats ---------------------------------------------------------------
-Repos: ....  {repos.rjust(2)} {{Contributed:  {contributed.rjust(2)}}} | Stars: ...........    {stars.rjust(2)}
-Commits: .................   {commits.rjust(3)} | Followers: .......   {followers.rjust(2)}
-Lines of Code on GitHub: {loc_total} ( {loc_add}++,   {loc_del}-- )
-------------------------------------------------------------------------------
-```"""
-    return block
+    <!-- Details -->
+    <text x="0" y="24" class="label">OS</text>
+    <text x="25" y="24" class="dot">: ..........................</text>
+    <text x="195" y="24" class="val">Linux, Windows 11, Web</text>
+
+    <text x="0" y="44" class="label">Uptime</text>
+    <text x="50" y="44" class="dot">: ......................</text>
+    <text x="195" y="44" class="val">{uptime}</text>
+
+    <text x="0" y="64" class="label">Host</text>
+    <text x="35" y="64" class="dot">: ........................</text>
+    <text x="195" y="64" class="val">Full-Stack AI &amp; Systems</text>
+
+    <text x="0" y="84" class="label">IDE</text>
+    <text x="30" y="84" class="dot">: .........................</text>
+    <text x="195" y="84" class="val">VS Code, IntelliJ IDEA, Antigravity</text>
+
+    <text x="0" y="112" class="label">Languages</text>
+    <text x="75" y="112" class="dot">: ...................</text>
+    <text x="195" y="112" class="val">Python, TypeScript, JavaScript, Java, C++</text>
+
+    <text x="0" y="132" class="label">Spoken</text>
+    <text x="50" y="132" class="dot">: ......................</text>
+    <text x="195" y="132" class="val">English, Hindi, Odia, Spanish</text>
+
+    <text x="0" y="152" class="label">Hobbies</text>
+    <text x="55" y="152" class="dot">: .....................</text>
+    <text x="195" y="152" class="val">Monkeytype, Photography, PC Building</text>
+
+    <!-- Contact Header -->
+    <text x="0" y="180" class="dash">-</text>
+    <text x="12" y="180" class="val">Contact</text>
+    <text x="70" y="180" class="dash">--------------------------------------------------------------</text>
+
+    <text x="0" y="200" class="label">Email</text>
+    <text x="45" y="200" class="dot">: .......................</text>
+    <text x="195" y="200" class="val">gouravkrishna23@gmail.com</text>
+
+    <text x="0" y="220" class="label">Portfolio</text>
+    <text x="70" y="220" class="dot">: ...................</text>
+    <text x="195" y="220" class="val">gouravk2304.vercel.app</text>
+
+    <text x="0" y="240" class="label">GitHub</text>
+    <text x="50" y="240" class="dot">: ......................</text>
+    <text x="195" y="240" class="val">github.com/tamatar-23</text>
+
+    <!-- GitHub Stats Header -->
+    <text x="0" y="268" class="dash">-</text>
+    <text x="12" y="268" class="val">GitHub Stats</text>
+    <text x="105" y="268" class="dash">--------------------------------------------------</text>
+
+    <text x="0" y="288" class="label">Repos</text>
+    <text x="45" y="288" class="dot">: ....</text>
+    <text x="80" y="288" class="val">{repos}</text>
+    <text x="105" y="288" class="contrib">{{Contributed: {contributed}}}</text>
+
+    <text x="220" y="288" class="dash">|</text>
+    <text x="235" y="288" class="label">Stars</text>
+    <text x="275" y="288" class="dot">: ...........</text>
+    <text x="370" y="288" class="val">{stars}</text>
+
+    <text x="0" y="308" class="label">Commits</text>
+    <text x="60" y="308" class="dot">: .................</text>
+    <text x="175" y="308" class="val">{commits}</text>
+
+    <text x="220" y="308" class="dash">|</text>
+    <text x="235" y="308" class="label">Followers</text>
+    <text x="305" y="308" class="dot">: .......</text>
+    <text x="370" y="308" class="val">{followers}</text>
+
+    <text x="0" y="328" class="label">Lines of Code on GitHub</text>
+    <text x="165" y="328" class="dot">:</text>
+    <text x="175" y="328" class="val">{loc_total}</text>
+    <text x="245" y="328" class="val">(</text>
+    <text x="255" y="328" class="green">{loc_add}++</text>
+    <text x="345" y="328" class="val">,</text>
+    <text x="355" y="328" class="red">{loc_del}--</text>
+    <text x="420" y="328" class="val">)</text>
+  </g>
+</svg>"""
+    return svg
 
 def update_readme():
     stats = get_github_stats()
     print("Fetched Stats:", stats)
-    fastfetch_block = format_fastfetch_block(stats)
+    
+    svg_content = generate_svg(stats)
     
     try:
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     except NameError:
         base_dir = os.getcwd()
-    readme_path = os.path.join(base_dir, "README.md")
+    card_path = os.path.join(base_dir, "card.svg")
     
-    if not os.path.exists(readme_path):
-        print("README.md not found!")
-        return
+    with open(card_path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(svg_content)
         
-    with open(readme_path, "r", encoding="utf-8") as f:
-        content = f.read()
-        
-    start_marker = "<!--START_SECTION:fastfetch-->"
-    end_marker = "<!--END_SECTION:fastfetch-->"
-    
-    if start_marker in content and end_marker in content:
-        pattern = f"{re.escape(start_marker)}[\\s\\S]*?{re.escape(end_marker)}"
-        new_section = f"{start_marker}\n{fastfetch_block}\n{end_marker}"
-        updated_content = re.sub(pattern, new_section, content)
-    else:
-        updated_content = f"{start_marker}\n{fastfetch_block}\n{end_marker}\n\n" + content
-        
-    with open(readme_path, "w", encoding="utf-8", newline="\n") as f:
-        f.write(updated_content)
-        
-    print("Successfully updated README.md")
+    print(f"Successfully generated {card_path}")
 
 if __name__ == "__main__":
     update_readme()
