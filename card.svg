@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="340" viewBox="0 0 850 340" fill="none">
+  <style>
+    .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 8px; }
+    .prompt { font: bold 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #58a6ff; }
+    .dash { font: 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #484f58; }
+    .label { font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #e5c07b; }
+    .dot { font: 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #484f58; }
+    .val { font: 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #c9d1d9; }
+    .contrib { font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #d19a66; }
+    .green { font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #73daca; }
+    .red { font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: #f7768e; }
+  </style>
+
+  <rect width="850" height="340" class="bg" />
+
+  <g transform="translate(35, 35)">
+    <!-- Header -->
+    <text x="0" y="0" class="prompt">gourav@tamatar-23</text>
+    <text x="145" y="0" class="dash">------------------------------------------------------------</text>
+
+    <!-- Details -->
+    <text x="0" y="24" class="label">OS</text>
+    <text x="25" y="24" class="dot">: ..........................</text>
+    <text x="195" y="24" class="val">Linux, Windows 11, Web</text>
+
+    <text x="0" y="44" class="label">Uptime</text>
+    <text x="50" y="44" class="dot">: ......................</text>
+    <text x="195" y="44" class="val">1 year, 5 months, 15 days</text>
+
+    <text x="0" y="64" class="label">Host</text>
+    <text x="35" y="64" class="dot">: ........................</text>
+    <text x="195" y="64" class="val">Full-Stack AI &amp; Systems</text>
+
+    <text x="0" y="84" class="label">IDE</text>
+    <text x="30" y="84" class="dot">: .........................</text>
+    <text x="195" y="84" class="val">VS Code, IntelliJ IDEA, Antigravity</text>
+
+    <text x="0" y="112" class="label">Languages</text>
+    <text x="75" y="112" class="dot">: ...................</text>
+    <text x="195" y="112" class="val">Python, TypeScript, JavaScript, Java, C++</text>
+
+    <text x="0" y="132" class="label">Spoken</text>
+    <text x="50" y="132" class="dot">: ......................</text>
+    <text x="195" y="132" class="val">English, Hindi, Odia, Spanish</text>
+
+    <text x="0" y="152" class="label">Hobbies</text>
+    <text x="55" y="152" class="dot">: .....................</text>
+    <text x="195" y="152" class="val">Monkeytype, Photography, PC Building</text>
+
+    <!-- Contact Header -->
+    <text x="0" y="180" class="dash">-</text>
+    <text x="12" y="180" class="val">Contact</text>
+    <text x="70" y="180" class="dash">--------------------------------------------------------------</text>
+
+    <text x="0" y="200" class="label">Email</text>
+    <text x="45" y="200" class="dot">: .......................</text>
+    <text x="195" y="200" class="val">gouravkrishna23@gmail.com</text>
+
+    <text x="0" y="220" class="label">Portfolio</text>
+    <text x="70" y="220" class="dot">: ...................</text>
+    <text x="195" y="220" class="val">gouravk2304.vercel.app</text>
+
+    <text x="0" y="240" class="label">GitHub</text>
+    <text x="50" y="240" class="dot">: ......................</text>
+    <text x="195" y="240" class="val">github.com/tamatar-23</text>
+
+    <!-- GitHub Stats Header -->
+    <text x="0" y="268" class="dash">-</text>
+    <text x="12" y="268" class="val">GitHub Stats</text>
+    <text x="105" y="268" class="dash">--------------------------------------------------</text>
+
+    <text x="0" y="288" class="label">Repos</text>
+    <text x="45" y="288" class="dot">: ....</text>
+    <text x="80" y="288" class="val">33</text>
+    <text x="105" y="288" class="contrib">{Contributed: 3}</text>
+
+    <text x="220" y="288" class="dash">|</text>
+    <text x="235" y="288" class="label">Stars</text>
+    <text x="275" y="288" class="dot">: ...........</text>
+    <text x="370" y="288" class="val">7</text>
+
+    <text x="0" y="308" class="label">Commits</text>
+    <text x="60" y="308" class="dot">: .................</text>
+    <text x="175" y="308" class="val">241</text>
+
+    <text x="220" y="308" class="dash">|</text>
+    <text x="235" y="308" class="label">Followers</text>
+    <text x="305" y="308" class="dot">: .......</text>
+    <text x="370" y="308" class="val">13</text>
+
+    <text x="0" y="328" class="label">Lines of Code on GitHub</text>
+    <text x="165" y="328" class="dot">:</text>
+    <text x="175" y="328" class="val">1,742,856</text>
+    <text x="245" y="328" class="val">(</text>
+    <text x="255" y="328" class="green">1,780,752++</text>
+    <text x="345" y="328" class="val">,</text>
+    <text x="355" y="328" class="red">37,896--</text>
+    <text x="420" y="328" class="val">)</text>
+  </g>
+</svg>
