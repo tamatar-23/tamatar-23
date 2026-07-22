@@ -1,19 +1,30 @@
-# Gourav Krishna Mishra
+<!--START_SECTION:fastfetch-->
+```text
+gourav@tamatar-23 -------------------------------------------------------------
+OS: .......................... Linux, Windows 11, Web
+Uptime: ...................... 1 year, 5 months, 15 days
+Host: ........................ Full-Stack AI & Systems
+IDE: ......................... VS Code, IntelliJ IDEA, Antigravity
 
-Full-stack AI engineer. I build production systems that put models to work — from agentic pipelines and inference optimization to real-time apps at scale.
+Languages: ................... Python, TypeScript, JavaScript, Java, C++
+Spoken: ...................... English, Hindi, Odia, Spanish
+Hobbies: ..................... Monkeytype, Photography, PC Building
+
+- Contact --------------------------------------------------------------------
+Email: ....................... gouravkrishna23@gmail.com
+Portfolio: ................... gouravk2304.vercel.app
+GitHub: ...................... github.com/tamatar-23
+
+- GitHub Stats ---------------------------------------------------------------
+Repos: ....  33 {Contributed:   3} | Stars: ...........     7
+Commits: .................   231 | Followers: .......    13
+Lines of Code on GitHub: 1,742,514 ( 1,779,762++,   37,248-- )
+------------------------------------------------------------------------------
+```
+<!--END_SECTION:fastfetch-->
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://gouravk2304.vercel.app)
 [![Email](https://img.shields.io/badge/gouravkrishna23@gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:gouravkrishna23@gmail.com)
-
----
-
-## Projects
-
-**[Agentic RAG System](https://github.com/tamatar-23/agent1)** — 8-node LangGraph pipeline with conditional routing and a self-reflection loop that auto-retries low-faithful answers. Two-tier query router uses keyword heuristics (zero tokens) with LLM fallback — 100% classification accuracy across 3 route types. Avg faithfulness **0.94** on an adversarial 10-question eval suite.
-
-**[T1ME](https://github.com/tamatar-23/t1me)** — Transformer-based financial forecasting system that reframes market data as token sequences for zero-shot prediction across full 360-minute trading windows. Frozen attention layers cut compute ~60% vs full fine-tuning. Distributed training via DDP + AMP with live data from Fyers API.
-
-**[GitConsistent](https://github.com/tamatar-23/gitconsistent)** — Production habit & growth platform on Firebase. 500+ concurrent users, 99.9% uptime. Cost-aware LLM routing between LLaMA 3.1-8B and 70B via Groq based on task complexity. Real-time sync via Firestore listeners with optimistic state updates.
 
 ---
 
