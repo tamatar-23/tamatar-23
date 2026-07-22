@@ -186,34 +186,27 @@ def format_fastfetch_block(stats):
     loc_add = f"{stats['additions']:,}"
     loc_del = f"{stats['deletions']:,}"
 
-    CYAN = "\u001b[1;36m"
-    YELLOW = "\u001b[1;33m"
-    GREEN = "\u001b[1;32m"
-    RED = "\u001b[1;31m"
-    GRAY = "\u001b[0;90m"
-    RESET = "\u001b[0m"
+    block = f"""```yaml
+gourav@tamatar-23: -------------------------------------------------------------
+OS: .......................... Linux, Windows 11, Web
+Uptime: ...................... {uptime}
+Host: ........................ Full-Stack AI & Systems
+IDE: ......................... VS Code, IntelliJ IDEA, Antigravity
 
-    block = f"""```ansi
-{CYAN}gourav@tamatar-23{RESET} {GRAY}-------------------------------------------------------------{RESET}
-{YELLOW}OS:{RESET} {GRAY}..........................{RESET} Linux, Windows 11, Web
-{YELLOW}Uptime:{RESET} {GRAY}......................{RESET} {uptime}
-{YELLOW}Host:{RESET} {GRAY}.......................{RESET} Full-Stack AI & Systems
-{YELLOW}IDE:{RESET} {GRAY}........................{RESET} VS Code, IntelliJ IDEA, Antigravity
+Languages: ................... Python, TypeScript, JavaScript, Java, C++
+Spoken: ...................... English, Hindi, Odia, Spanish
+Hobbies: ..................... Monkeytype, Photography, PC Building
 
-{YELLOW}Languages:{RESET} {GRAY}...................{RESET} Python, TypeScript, JavaScript, Java, C++
-{YELLOW}Spoken:{RESET} {GRAY}......................{RESET} English, Hindi, Odia, Spanish
-{YELLOW}Hobbies:{RESET} {GRAY}.....................{RESET} Monkeytype, Photography, PC Building
+# Contact --------------------------------------------------------------------
+Email: ....................... gouravkrishna23@gmail.com
+Portfolio: ................... gouravk2304.vercel.app
+GitHub: ...................... github.com/tamatar-23
 
-{GRAY}-{RESET} {CYAN}Contact{RESET} {GRAY}--------------------------------------------------------------------{RESET}
-{YELLOW}Email:{RESET} {GRAY}.......................{RESET} gouravkrishna23@gmail.com
-{YELLOW}Portfolio:{RESET} {GRAY}...................{RESET} gouravk2304.vercel.app
-{YELLOW}GitHub:{RESET} {GRAY}......................{RESET} github.com/tamatar-23
-
-{GRAY}-{RESET} {CYAN}GitHub Stats{RESET} {GRAY}---------------------------------------------------------------{RESET}
-{YELLOW}Repos:{RESET} {GRAY}....{RESET}  {repos.rjust(2)} {CYAN}{{Contributed: {contributed.rjust(2)}}}{RESET} {GRAY}|{RESET} {YELLOW}Stars:{RESET} {GRAY}...........{RESET}    {stars.rjust(2)}
-{YELLOW}Commits:{RESET} {GRAY}.................{RESET}   {commits.rjust(3)} {GRAY}|{RESET} {YELLOW}Followers:{RESET} {GRAY}.......{RESET}   {followers.rjust(2)}
-{YELLOW}Lines of Code on GitHub:{RESET} {CYAN}{loc_total}{RESET} ( {GREEN}{loc_add}++{RESET},   {RED}{loc_del}--{RESET} )
-{GRAY}------------------------------------------------------------------------------{RESET}
+# GitHub Stats ---------------------------------------------------------------
+Repos: ....  {repos.rjust(2)} {{Contributed:  {contributed.rjust(2)}}} | Stars: ...........    {stars.rjust(2)}
+Commits: .................   {commits.rjust(3)} | Followers: .......   {followers.rjust(2)}
+Lines of Code on GitHub: {loc_total} ( {loc_add}++,   {loc_del}-- )
+------------------------------------------------------------------------------
 ```"""
     return block
 
