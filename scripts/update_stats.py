@@ -83,10 +83,10 @@ def get_github_stats():
             "repos": 33,
             "contributed": 3,
             "stars": 7,
-            "commits": 244,
+            "commits": 245,
             "followers": 13,
-            "additions": 1780871,
-            "deletions": 37955,
+            "additions": 1780940,
+            "deletions": 38024,
             "total_loc": 1742916
         }
         
@@ -314,7 +314,12 @@ def update_readme():
     with open(card_path, "w", encoding="utf-8", newline="\n") as f:
         f.write(svg_content)
         
-    print(f"Successfully generated {card_path}")
+    readme_path = os.path.join(base_dir, "README.md")
+    readme_content = '<p align="center">\n  <img src="./card.svg?v=2.0" alt="Gourav\'s Fastfetch Profile" width="100%">\n</p>\n'
+    with open(readme_path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(readme_content)
+        
+    print(f"Successfully updated card.svg and README.md")
 
 if __name__ == "__main__":
     update_readme()
