@@ -18,13 +18,13 @@
 
   <!-- Left ASCII Terminal Box -->
   <g transform="translate(30, 75)">
-    <text x="0" y="0" class="ascii">  ┌───────────────────────┐</text>
-      <text x="0" y="22" class="ascii">  │  TAMATAR-23 // CORE   │</text>
-      <text x="0" y="44" class="ascii">  │  ───────────────────  │</text>
-      <text x="0" y="66" class="ascii">  │  [AI / ML PIPELINES]  │</text>
-      <text x="0" y="88" class="ascii">  │  [AGENTIC RAG]        │</text>
-      <text x="0" y="110" class="ascii">  │  [QUANT SYSTEMS]      │</text>
-      <text x="0" y="132" class="ascii">  └───────────────────────┘</text>
+    <text x="0" y="0" class="ascii">+-----------------------+</text>
+      <text x="0" y="22" class="ascii">|  TAMATAR-23 // CORE   |</text>
+      <text x="0" y="44" class="ascii">|  -------------------  |</text>
+      <text x="0" y="66" class="ascii">|  [AI / ML PIPELINES]  |</text>
+      <text x="0" y="88" class="ascii">|  [AGENTIC RAG]        |</text>
+      <text x="0" y="110" class="ascii">|  [QUANT SYSTEMS]      |</text>
+      <text x="0" y="132" class="ascii">+-----------------------+</text>
   </g>
 
   <!-- Right Fastfetch Specs -->
@@ -98,7 +98,7 @@
     <text x="340" y="72" class="bar">|</text>
     <text x="360" y="72" class="key">Commits</text>
     <text x="425" y="72" class="dot">:</text>
-    <text x="435" y="72" class="val">233</text>
+    <text x="435" y="72" class="val">235</text>
 
     <text x="510" y="72" class="bar">|</text>
     <text x="530" y="72" class="key">Followers</text>
@@ -107,11 +107,11 @@
 
     <text x="0" y="94" class="key">Lines of Code</text>
     <text x="110" y="94" class="dot">:</text>
-    <text x="120" y="94" class="sub">1,742,805</text>
+    <text x="120" y="94" class="sub">1,743,151</text>
     <text x="210" y="94" class="val">(</text>
-    <text x="220" y="94" class="add">1,780,068++</text>
+    <text x="220" y="94" class="add">1,780,468++</text>
     <text x="315" y="94" class="val">,</text>
-    <text x="330" y="94" class="del">37,263--</text>
+    <text x="330" y="94" class="del">37,317--</text>
     <text x="400" y="94" class="val">)</text>
   </g>
 </svg>
