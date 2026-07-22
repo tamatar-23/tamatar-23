@@ -83,11 +83,11 @@ def get_github_stats():
             "repos": 33,
             "contributed": 3,
             "stars": 7,
-            "commits": 240,
+            "commits": 242,
             "followers": 13,
-            "additions": 1780629,
-            "deletions": 37821,
-            "total_loc": 1742808
+            "additions": 1780852,
+            "deletions": 37896,
+            "total_loc": 1742956
         }
         
     user_data = res["data"]["user"]
@@ -195,7 +195,7 @@ def generate_svg(stats):
     loc_add = f"{stats['additions']:,}"
     loc_del = f"{stats['deletions']:,}"
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="850" height="340" viewBox="0 0 850 340" fill="none">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="850" height="410" viewBox="0 0 850 410" fill="none">
   <style>
     .bg {{ fill: {bg_color}; stroke: {border_color}; stroke-width: 1px; rx: 8px; }}
     .prompt {{ font: bold 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {prompt_color}; }}
@@ -208,14 +208,14 @@ def generate_svg(stats):
     .red {{ font: bold 13px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; fill: {red_color}; }}
   </style>
 
-  <rect width="850" height="340" class="bg" />
+  <rect width="850" height="410" class="bg" />
 
   <g transform="translate(35, 35)">
     <!-- Header -->
     <text x="0" y="0" class="prompt">gourav@tamatar-23</text>
     <text x="145" y="0" class="dash">------------------------------------------------------------</text>
 
-    <!-- Details -->
+    <!-- Specs -->
     <text x="0" y="24" class="label">OS</text>
     <text x="25" y="24" class="dot">: ..........................</text>
     <text x="195" y="24" class="val">Linux, Windows 11, Web</text>
@@ -293,6 +293,8 @@ def generate_svg(stats):
     <text x="345" y="328" class="val">,</text>
     <text x="355" y="328" class="red">{loc_del}--</text>
     <text x="420" y="328" class="val">)</text>
+
+    <text x="0" y="348" class="dash">----------------------------------------------------------------------</text>
   </g>
 </svg>"""
     return svg
