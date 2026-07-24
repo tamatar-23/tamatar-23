@@ -1,6 +1,7 @@
 import os
 import json
 import urllib.request
+import urllib.parse
 import time
 from datetime import datetime
 
@@ -309,15 +310,48 @@ def update_readme():
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     except NameError:
         base_dir = os.getcwd()
+        
     card_path = os.path.join(base_dir, "card.svg")
-    
     with open(card_path, "w", encoding="utf-8", newline="\n") as f:
         f.write(svg_content)
         
+    loc_total = f"{stats['total_loc']:,}"
+    loc_add = f"{stats['additions']:,}"
+    loc_del = f"{stats['deletions']:,}"
+    
+    loc_total_enc = urllib.parse.quote(loc_total)
+    loc_add_enc = "%2B" + urllib.parse.quote(loc_add)
+    loc_del_enc = "-" + urllib.parse.quote(loc_del)
+    
+    stats_block = f"""<!-- STATS:START -->
+[![Total LOC](https://img.shields.io/badge/Lines_of_Code-{loc_total_enc}-2db457?style=flat-square&logo=github&logoColor=white)](https://github.com/tamatar-23)
+[![Additions](https://img.shields.io/badge/%2B_Additions-{loc_add_enc}-2ea44f?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
+[![Deletions](https://img.shields.io/badge/---_Deletions-{loc_del_enc}-da3633?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
+
+```diff
++ {loc_add} additions (+ve LOC)
+- {loc_del} deletions (-ve LOC)
+  {loc_total} net lines of code
+```
+<!-- STATS:END -->"""
+
     readme_path = os.path.join(base_dir, "README.md")
-    readme_content = '<p align="center">\n  <img src="./card.svg?v=2.0" alt="Gourav\'s Fastfetch Profile" width="100%">\n</p>\n'
-    with open(readme_path, "w", encoding="utf-8", newline="\n") as f:
-        f.write(readme_content)
+    if os.path.exists(readme_path):
+        with open(readme_path, "r", encoding="utf-8") as f:
+            content = f.read()
+            
+        start_marker = "<!-- STATS:START -->"
+        end_marker = "<!-- STATS:END -->"
+        
+        if start_marker in content and end_marker in content:
+            before = content.split(start_marker)[0]
+            after = content.split(end_marker)[1]
+            new_content = before + stats_block + after
+        else:
+            new_content = content + "\n\n" + stats_block
+            
+        with open(readme_path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(new_content)
         
     print(f"Successfully updated card.svg and README.md")
 

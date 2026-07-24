@@ -1,3 +1,68 @@
-<p align="center">
-  <img src="./card.svg?v=2.0" alt="Gourav's Fastfetch Profile" width="100%">
-</p>
+# Gourav Krishna Mishra
+
+**Full Stack AI Developer**  
+[Portfolio](https://gouravk2304.vercel.app) | [GitHub](https://github.com/tamatar-23) | [LinkedIn](https://linkedin.com/in/gourav-krishna) | Email: gouravkrishna23@gmail.com
+
+Computer Science undergrad building AI-powered applications, LLM workflows, and scalable backend infrastructure.
+
+---
+
+### Experience
+
+- **Full Stack Developer Intern** @ Praava Legal *(May 2026 - Jun 2026)* — Built Next.js dashboards, Spring Boot CRUD APIs, and an idempotent payment framework.
+
+---
+
+### Projects
+
+- **Agentic RAG System**: 8-node LangGraph pipeline with ChromaDB retrieval and self-reflection scoring 0.94 faithfulness.
+- **Time Series LLM**: Transformer-based Nifty50 forecasting system with frozen attention cutting compute costs by ~60%.
+- **GitConsistent**: AI growth platform supporting 500+ concurrent users with Firebase and LLaMA 3.1 cost-aware routing.
+
+---
+
+### Achievements
+
+- Goldman Sachs India Hackathon — Rank 311 / 30,000+ (Top 1%)
+- HackerRank Orchestrate — Rank 527 / 12,000+
+
+---
+
+### Tech Stack
+
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://www.java.com)
+[![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)](https://isocpp.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org)
+[![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com)
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org)
+[![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com)
+[![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)](https://redis.io)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)](https://firebase.google.com)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com)
+[![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)](https://aws.amazon.com)
+[![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com)
+
+---
+
+### GitHub Stats
+
+<!-- STATS:START -->
+[![Total LOC](https://img.shields.io/badge/Lines_of_Code-1%2C742%2C916-2db457?style=flat-square&logo=github&logoColor=white)](https://github.com/tamatar-23)
+[![Additions](https://img.shields.io/badge/%2B_Additions-%2B1%2C780%2C940-2ea44f?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
+[![Deletions](https://img.shields.io/badge/---_Deletions--38%2C024-da3633?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
+
+```diff
++ 1,780,940 additions (+ve LOC)
+- 38,024 deletions (-ve LOC)
+  1,742,916 net lines of code
+```
+<!-- STATS:END -->
