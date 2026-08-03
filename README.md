@@ -57,12 +57,12 @@ Computer Science undergrad building AI-powered applications, LLM workflows, and 
 
 <!-- STATS:START -->
 [![Total LOC](https://img.shields.io/badge/Lines_of_Code-1%2C850%2C653-2db457?style=flat-square&logo=github&logoColor=white)](https://github.com/tamatar-23)
-[![Additions](https://img.shields.io/badge/%2B_Additions-%2B1%2C902%2C500-2ea44f?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
-[![Deletions](https://img.shields.io/badge/---_Deletions--51%2C847-da3633?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
+[![Additions](https://img.shields.io/badge/%2B_Additions-%2B1%2C902%2C509-2ea44f?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
+[![Deletions](https://img.shields.io/badge/---_Deletions--51%2C856-da3633?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
 
 ```diff
-+ 1,902,500 additions (+ve LOC)
-- 51,847 deletions (-ve LOC)
++ 1,902,509 additions (+ve LOC)
+- 51,856 deletions (-ve LOC)
   1,850,653 net lines of code
 ```
 <!-- STATS:END -->
