@@ -321,8 +321,8 @@ def update_readme():
     
     stats_block = f"""<!-- STATS:START -->
 - **Net Lines of Code**: {loc_total}
-- 🟢 **Additions**: +{loc_add}
-- 🔴 **Deletions**: -{loc_del}
+- **Additions**: $\\color{{#2ea44f}}{{+{loc_add}}}$
+- **Deletions**: $\\color{{#da3633}}{{-{loc_del}}}$
 <!-- STATS:END -->"""
 
     readme_path = os.path.join(base_dir, "README.md")
