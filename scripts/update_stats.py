@@ -320,11 +320,9 @@ def update_readme():
     loc_del = f"{stats['deletions']:,}"
     
     stats_block = f"""<!-- STATS:START -->
-```diff
-+ {loc_add} additions (+ve loc)
-- {loc_del} deletions (-ve loc)
-  {loc_total} net lines of code
-```
+- **Net Lines of Code**: {loc_total}
+- 🟢 **Additions**: +{loc_add}
+- 🔴 **Deletions**: -{loc_del}
 <!-- STATS:END -->"""
 
     readme_path = os.path.join(base_dir, "README.md")
