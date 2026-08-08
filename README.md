@@ -53,8 +53,8 @@ computer science undergrad building ai-powered applications, llm workflows, and 
 
 <!-- STATS:START -->
 ```diff
-+ 1,780,940 additions (+ve loc)
-- 38,024 deletions (-ve loc)
-  1,742,916 net lines of code
++ 1,904,936 additions (+ve loc)
+- 52,545 deletions (-ve loc)
+  1,852,391 net lines of code
 ```
 <!-- STATS:END -->
