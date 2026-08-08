@@ -319,18 +319,10 @@ def update_readme():
     loc_add = f"{stats['additions']:,}"
     loc_del = f"{stats['deletions']:,}"
     
-    loc_total_enc = urllib.parse.quote(loc_total)
-    loc_add_enc = "%2B" + urllib.parse.quote(loc_add)
-    loc_del_enc = "-" + urllib.parse.quote(loc_del)
-    
     stats_block = f"""<!-- STATS:START -->
-[![Total LOC](https://img.shields.io/badge/Lines_of_Code-{loc_total_enc}-2db457?style=flat-square&logo=github&logoColor=white)](https://github.com/tamatar-23)
-[![Additions](https://img.shields.io/badge/%2B_Additions-{loc_add_enc}-2ea44f?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
-[![Deletions](https://img.shields.io/badge/---_Deletions-{loc_del_enc}-da3633?style=flat-square&logo=git&logoColor=white)](https://github.com/tamatar-23)
-
 ```diff
-+ {loc_add} additions (+ve LOC)
-- {loc_del} deletions (-ve LOC)
++ {loc_add} additions (+ve loc)
+- {loc_del} deletions (-ve loc)
   {loc_total} net lines of code
 ```
 <!-- STATS:END -->"""
