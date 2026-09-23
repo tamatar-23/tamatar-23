@@ -53,6 +53,6 @@ Computer Science undergrad building AI-powered applications, LLM workflows, and 
 
 <!-- STATS:START -->
 - **Net Lines of Code**: 1,940,899
-- **Additions**: $\color{#2ea44f}{+2,004,553}$
-- **Deletions**: $\color{#da3633}{-63,654}$
+- **Additions**: $\color{#2ea44f}{+2,004,562}$
+- **Deletions**: $\color{#da3633}{-63,663}$
 <!-- STATS:END -->
