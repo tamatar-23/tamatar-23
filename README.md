@@ -52,7 +52,7 @@ Computer Science undergrad building AI-powered applications, LLM workflows, and 
 ### GitHub Stats
 
 <!-- STATS:START -->
-- **Net Lines of Code**: 1,984,397
-- **Additions**: $\color{#2ea44f}{+2,083,693}$
-- **Deletions**: $\color{#da3633}{-99,296}$
+- **Net Lines of Code**: 1,976,245
+- **Additions**: $\color{#2ea44f}{+2,072,536}$
+- **Deletions**: $\color{#da3633}{-96,291}$
 <!-- STATS:END -->
